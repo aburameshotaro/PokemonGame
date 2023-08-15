@@ -1,4 +1,10 @@
+using Microsoft.EntityFrameworkCore;
+using PokemonGame.Entities;
+
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddDbContext<PokemonDbContext>(options => 
+options.UseSqlServer(builder.Configuration.GetConnectionString("PokemonDB")));
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
