@@ -25,20 +25,7 @@ namespace PokemonGame.Entities
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
-            modelBuilder.Entity<Bag>()
-                .HasKey(b => new { b.TrainerId, b.ItemId });
 
-            modelBuilder.Entity<LevelUpAttack>()
-                .HasKey(a => new { a.PokemonSpeciesId, a.AttackId });
-
-            modelBuilder.Entity<TmAttack>()
-                .HasKey(a => new { a.PokemonSpeciesId, a.AttackId });
-
-            modelBuilder.Entity<ProbabilityAppearance>()
-                .HasKey(a => new { a.PokemonSpeciesId, a.LocationId });
-
-            modelBuilder.Entity<TypeAttackBonus>()
-                .HasKey(a => new { a.AttackTypeId, a.DefenderTypeId });
 
             modelBuilder.Entity<PokemonSpecies>()
                 .HasOne(p => p.Type1)

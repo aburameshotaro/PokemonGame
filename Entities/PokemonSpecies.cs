@@ -20,9 +20,9 @@ namespace PokemonGame.Entities
         public virtual List<LevelUpAttack> LevelUpAttacks { get; set; }
         public virtual List<TmAttack> TmAttacks { get; set; }
         public int Type1Id { get; set; }
-        public int Type2Id { get; set; }
+        public int? Type2Id { get; set; }
         public virtual Type Type1 { get; set; }
-        public virtual Type Type2 { get; set; }
+        public virtual Type? Type2 { get; set; }
         public List<ProbabilityAppearance> ProbabilityAppearances { get; set; }
         public virtual List<Evolution> EvolvesFrom { get; set; }
         public virtual List<Evolution> EvolvesInto { get; set; }
